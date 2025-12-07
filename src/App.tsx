@@ -293,37 +293,48 @@ function App() {
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get in Touch</h3>
                 <div className="space-y-5">
-                  <div className="flex items-start gap-4 group">
+                  <a
+                    href="tel:+19012960393"
+                    className="flex items-start gap-4 group cursor-pointer"
+                  >
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Phone</p>
-                      <a href="tel:+19015551234" className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">
+                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">
                         (901) 296-0393
-                      </a>
+                      </p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4 group">
+                  </a>
+                  <a
+                    href="mailto:info@meadowlandllc.com"
+                    className="flex items-start gap-4 group cursor-pointer"
+                  >
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Email</p>
-                      <a href="mailto:info@meadowlandllc.com" className="text-slate-600 hover:text-cyan-600 transition-colors font-medium break-all">
+                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium break-all">
                         info@meadowlandllc.com
-                      </a>
+                      </p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4 group">
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=3189+Kirby+Whitten+Rd+Bartlett+Tennessee+38134"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 group cursor-pointer"
+                  >
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Location</p>
-                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
+                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
 
