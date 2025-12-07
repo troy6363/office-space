@@ -10,7 +10,7 @@ function App() {
       <main className="main">
         <div className="content">
           <h2>Welcome to Office Space</h2>
-          <p>Your workspace management solution</p>
+          <p>Your workspace management solution901 memphis</p>
         </div>
       </main>
     </div>
