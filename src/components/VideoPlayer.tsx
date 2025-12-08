@@ -5,11 +5,9 @@ import { Play, Pause } from 'lucide-react';
 interface VideoPlayerProps {
   videoId: string;
   title?: string;
-  vertical?: boolean;
-  appId?: string;
 }
 
-function VideoPlayer({ videoId, title = 'Video', vertical = false, appId = '58479' }: VideoPlayerProps) {
+function VideoPlayer({ videoId, title = 'Video' }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [playerReady, setPlayerReady] = useState(false);
@@ -73,17 +71,16 @@ function VideoPlayer({ videoId, title = 'Video', vertical = false, appId = '5847
 
   return (
     <div
-      className={`relative w-full bg-black rounded-lg overflow-hidden group ${vertical ? '' : 'aspect-video'}`}
-      style={vertical ? { paddingTop: '177.78%' } : {}}
+      className="relative aspect-video w-full bg-black rounded-lg overflow-hidden group"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       <iframe
         ref={iframeRef}
-        src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=${appId}&muted=1`}
-        className={vertical ? "absolute top-0 left-0 w-full h-full" : "w-full h-full"}
+        src={`https://player.vimeo.com/video/${videoId}?background=0&autoplay=0&loop=0&muted=0&title=0&byline=0&portrait=0&controls=1`}
+        className="w-full h-full"
         frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allow="autoplay; fullscreen; picture-in-picture"
         allowFullScreen
         title={title}
       />
