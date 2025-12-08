@@ -28,21 +28,47 @@ function HomePage() {
       return;
     }
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    console.log('EmailJS Configuration Check:');
+    console.log('Service ID exists:', !!serviceId);
+    console.log('Template ID exists:', !!templateId);
+    console.log('Public Key exists:', !!publicKey);
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Email service configuration error. Please contact support.'
+      });
+      console.error('Missing EmailJS configuration');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      console.log('Sending email with data:', {
+        from_name: formData.name,
+        from_email: formData.email,
+        office_type: formData.officeType,
+      });
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
           office_type: formData.officeType,
           message: formData.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        publicKey
       );
+
+      console.log('EmailJS response:', response);
 
       if (formData.officeType.includes('Virtual Office')) {
         navigate('/thank-you/virtual');
@@ -56,8 +82,29 @@ function HomePage() {
         setFormData({ name: '', email: '', officeType: '', message: '' });
       }
     } catch (error: any) {
-      console.error('EmailJS error:', error);
-      const errorMessage = error?.text || error?.message || 'Failed to send message. Please try again or contact us directly.';
+      console.error('EmailJS error details:', {
+        error,
+        text: error?.text,
+        message: error?.message,
+        status: error?.status,
+      });
+
+      let errorMessage = 'Failed to send message. ';
+
+      if (error?.status === 400) {
+        errorMessage += 'Invalid template or service configuration.';
+      } else if (error?.status === 401) {
+        errorMessage += 'Authentication failed. Please contact support.';
+      } else if (error?.status === 403) {
+        errorMessage += 'Access denied. Please contact support.';
+      } else if (error?.text) {
+        errorMessage += error.text;
+      } else if (error?.message) {
+        errorMessage += error.message;
+      } else {
+        errorMessage += 'Please try again or contact us directly at info@meadowlandllc.com';
+      }
+
       setSubmitStatus({
         type: 'error',
         message: errorMessage
