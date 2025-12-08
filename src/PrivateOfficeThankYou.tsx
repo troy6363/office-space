@@ -208,7 +208,7 @@ function PrivateOfficeThankYou() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700">6 or 12 month lease options</span>
+                  <span className="text-slate-700">12 month lease options</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
