@@ -1,15 +1,11 @@
 import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
-import { useState, FormEvent, useEffect } from 'react';
+import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { supabase } from '../lib/supabase';
 
 function HomePage() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
