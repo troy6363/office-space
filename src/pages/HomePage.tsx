@@ -1,5 +1,5 @@
 import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
-import { useState, FormEvent, useEffect } from 'react';
+import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
@@ -16,10 +16,6 @@ function HomePage() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
-
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -59,11 +55,12 @@ function HomePage() {
         });
         setFormData({ name: '', email: '', officeType: '', message: '' });
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('EmailJS error:', error);
+      const errorMessage = error?.text || error?.message || 'Failed to send message. Please try again or contact us directly.';
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again or contact us directly.'
+        message: errorMessage
       });
     } finally {
       setIsSubmitting(false);
