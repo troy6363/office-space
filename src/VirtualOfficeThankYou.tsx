@@ -187,9 +187,9 @@ function VirtualOfficeThankYou() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12 max-w-2xl mx-auto">
             <video
-              className="w-full aspect-video"
+              className="w-full aspect-[9/16]"
               controls
               preload="metadata"
             >
