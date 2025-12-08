@@ -32,16 +32,14 @@ function VirtualOfficeThankYou() {
 
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
             <div className="aspect-video w-full">
-              <video
+              <iframe
+                src="https://www.youtube.com/embed/yMOBwWRwiOo?mute=0&rel=0"
                 className="w-full h-full"
-                controls
-                preload="metadata"
-                poster="/office.jpg"
-                aria-label="Virtual Office Space Tour Video"
-              >
-                <source src="/virtual_office_space_ai.mp4" type="video/mp4" />
-                Your browser does not support the video player. Please use a modern browser to view this content.
-              </video>
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Virtual Office Tour"
+              ></iframe>
             </div>
           </div>
 
