@@ -31,12 +31,8 @@ function PhysicalOfficeThankYou() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8 p-4 max-w-md mx-auto">
-            <VideoPlayer
-              videoId="1037985159"
-              title="Coworking Space with 24 Hour Access & Privacy"
-              vertical={true}
-            />
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8 p-4">
+            <VideoPlayer videoId="1137893488" title="Private Office Tour" />
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
