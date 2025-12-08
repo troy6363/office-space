@@ -51,6 +51,7 @@ function App() {
       });
       setFormData({ name: '', email: '', officeType: '', message: '' });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus({
         type: 'error',
         message: 'Failed to send message. Please try again or contact us directly.'
