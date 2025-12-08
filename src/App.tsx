@@ -114,62 +114,62 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                <Building2 className="w-6 h-6 text-cyan-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-cyan-200 transition-all duration-300">
+                <Building2 className="w-6 h-6 text-cyan-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Private Offices</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors duration-300">Private Offices</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 Private offices perfect for focused work and client meetings.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Wifi className="w-6 h-6 text-blue-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300">
+                <Wifi className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Virtual Offices</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Virtual Offices</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 Professional business address with mail handling.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <Coffee className="w-6 h-6 text-slate-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-slate-200 transition-all duration-300">
+                <Coffee className="w-6 h-6 text-slate-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Modern Amenities</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors duration-300">Modern Amenities</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 High-speed internet and comfortable common areas.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-cyan-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-cyan-200 transition-all duration-300">
+                <MapPin className="w-6 h-6 text-cyan-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Prime Location</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors duration-300">Prime Location</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 Located in Bartlett, TN - the safest area in the midsouth with easy access to major highways.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-blue-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300">
+                <Users className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Meeting Rooms</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Meeting Rooms</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 Professional conference rooms available for client presentations and team meetings.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-slate-600" />
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-slate-200 transition-all duration-300">
+                <DollarSign className="w-6 h-6 text-slate-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2">Flexible Terms</h3>
-              <p className="text-slate-600">
+              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors duration-300">Flexible Terms</h3>
+              <p className="text-slate-600 transition-colors duration-300">
                 6 or 12 month terms available
               </p>
             </div>
