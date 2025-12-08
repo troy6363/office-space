@@ -321,7 +321,7 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Location</p>
-                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee</p>
+                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
                     </div>
                   </div>
                 </div>
