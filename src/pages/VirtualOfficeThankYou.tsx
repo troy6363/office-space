@@ -1,5 +1,6 @@
 import { Building2, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import VideoPlayer from '../components/VideoPlayer';
 
 function VirtualOfficeThankYou() {
   return (
@@ -30,17 +31,8 @@ function VirtualOfficeThankYou() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
-            <div className="aspect-video w-full">
-              <iframe
-                src="YOUR_VIMEO_VIDEO_URL_HERE?autoplay=1&muted=1&loop=1&autopause=0"
-                className="w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="Virtual Office Tour"
-              ></iframe>
-            </div>
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8 p-4">
+            <VideoPlayer videoId="1137893488" title="Virtual Office Tour" />
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
