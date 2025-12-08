@@ -1,65 +1,6 @@
 import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
-import { useState, useEffect, FormEvent } from 'react';
-import emailjs from '@emailjs/browser';
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    officeType: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
-
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.officeType || !formData.message) {
-      setSubmitStatus({
-        type: 'error',
-        message: 'Please fill in all fields'
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          office_type: formData.officeType,
-          message: formData.message,
-        }
-      );
-
-      setSubmitStatus({
-        type: 'success',
-        message: 'Message sent successfully! We\'ll get back to you soon.'
-      });
-      setFormData({ name: '', email: '', officeType: '', message: '' });
-    } catch (error) {
-      console.error('EmailJS Error:', error);
-      setSubmitStatus({
-        type: 'error',
-        message: 'Failed to send message. Please try again or contact us directly.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -293,7 +234,7 @@ function App() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-2xl mx-auto">
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get in Touch</h3>
                 <div className="space-y-5">
@@ -340,65 +281,6 @@ function App() {
                     </div>
                   </a>
                 </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all">
-                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Send a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border-2 border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:bg-white transition-all"
-                    disabled={isSubmitting}
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border-2 border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:bg-white transition-all"
-                    disabled={isSubmitting}
-                  />
-                  <select
-                    value={formData.officeType}
-                    onChange={(e) => setFormData({ ...formData, officeType: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border-2 border-slate-200 text-slate-900 focus:outline-none focus:border-cyan-500 focus:bg-white transition-all"
-                    disabled={isSubmitting}
-                  >
-                    <option value="" disabled>Select Office Type</option>
-                    <option value="Virtual Office - $150 per month">Virtual Office - $150 per month</option>
-                    <option value="Physical Office - $450 per month">Physical Office - $450 per month</option>
-                    <option value="I'm not sure, I want to discuss">I'm not sure, I want to discuss</option>
-                  </select>
-                  <textarea
-                    placeholder="Your Message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border-2 border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:bg-white transition-all resize-none"
-                    disabled={isSubmitting}
-                  ></textarea>
-
-                  {submitStatus.type && (
-                    <div className={`p-4 rounded-xl font-medium ${
-                      submitStatus.type === 'success'
-                        ? 'bg-green-100 text-green-800 border-2 border-green-300'
-                        : 'bg-red-100 text-red-800 border-2 border-red-300'
-                    }`}>
-                      {submitStatus.message}
-                    </div>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-4 rounded-xl font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
-                </form>
               </div>
             </div>
           </div>
