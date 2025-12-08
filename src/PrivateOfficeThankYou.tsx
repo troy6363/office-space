@@ -249,6 +249,7 @@ function PrivateOfficeThankYou() {
           <div className="text-center">
             <Link
               to="/"
+              onClick={() => window.scrollTo(0, 0)}
               className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Return to Home
