@@ -33,10 +33,10 @@ function VirtualOfficeThankYou() {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
             <div className="aspect-video w-full">
               <iframe
-                src="https://www.youtube.com/embed/yMOBwWRwiOo?mute=0&rel=0"
+                src="YOUR_VIMEO_VIDEO_URL_HERE?autoplay=1&muted=1&loop=1&autopause=0"
                 className="w-full h-full"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 title="Virtual Office Tour"
               ></iframe>
