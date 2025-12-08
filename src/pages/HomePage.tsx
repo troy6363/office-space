@@ -1,8 +1,7 @@
 import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import { supabase } from '../lib/supabase';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -17,6 +16,10 @@ function HomePage() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,34 +36,17 @@ function HomePage() {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const { error: supabaseError } = await supabase.from('form_submissions').insert([
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          name: formData.name,
-          email: formData.email,
+          from_name: formData.name,
+          from_email: formData.email,
           office_type: formData.officeType,
-          message: formData.message
-        }
-      ]);
-
-      if (supabaseError) {
-        throw supabaseError;
-      }
-
-      try {
-        await emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          {
-            from_name: formData.name,
-            from_email: formData.email,
-            office_type: formData.officeType,
-            message: formData.message,
-          },
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        );
-      } catch (emailError) {
-        console.error('EmailJS notification failed:', emailError);
-      }
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       if (formData.officeType.includes('Virtual Office')) {
         navigate('/thank-you/virtual');
@@ -74,7 +60,7 @@ function HomePage() {
         setFormData({ name: '', email: '', officeType: '', message: '' });
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('EmailJS error:', error);
       setSubmitStatus({
         type: 'error',
         message: 'Failed to send message. Please try again or contact us directly.'
