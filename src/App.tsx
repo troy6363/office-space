@@ -321,7 +321,7 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Location</p>
-                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
+                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee</p>
                     </div>
                   </div>
                 </div>
@@ -398,10 +398,10 @@ function App() {
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-heading font-bold text-slate-900">Your New Office Space Awaits</span>
+              <span className="text-xl font-heading font-bold text-slate-900">Your New Office Space</span>
             </div>
             <p className="text-sm font-medium text-slate-600">
-              © 2025 Meadowland LLC All rights reserved.
+              © 2025 All rights reserved.
             </p>
           </div>
         </div>
