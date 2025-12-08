@@ -236,19 +236,14 @@ function PrivateOfficeThankYou() {
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
-            <div className="aspect-video bg-slate-200 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-20 h-20 bg-slate-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building2 className="w-10 h-10 text-slate-500" />
-                </div>
-                <p className="text-slate-600 text-lg">
-                  Video embed placeholder
-                </p>
-                <p className="text-slate-500 text-sm mt-2">
-                  Replace this section with your video embed code
-                </p>
-              </div>
-            </div>
+            <video
+              className="w-full aspect-video"
+              controls
+              preload="metadata"
+            >
+              <source src="/virtual_office_space_ai.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className="text-center">
