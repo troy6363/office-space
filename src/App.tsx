@@ -398,10 +398,10 @@ function App() {
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-heading font-bold text-slate-900">Your New Office Space</span>
+              <span className="text-xl font-heading font-bold text-slate-900">Your New Office Space Awaits</span>
             </div>
             <p className="text-sm font-medium text-slate-600">
-              © 2025 All rights reserved.
+              © 2025 Meadowland LLC All rights reserved.
             </p>
           </div>
         </div>
