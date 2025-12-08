@@ -1,4 +1,5 @@
 import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
@@ -135,7 +136,13 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="border-2 border-green-500 rounded-2xl p-8 relative bg-green-50/50">
+            <motion.div
+              className="border-2 border-green-500 rounded-2xl p-8 relative bg-green-50/50"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                 Popular
               </div>
@@ -171,9 +178,15 @@ function App() {
               >
                 Get Started
               </a>
-            </div>
+            </motion.div>
 
-            <div className="border-2 border-slate-200 rounded-2xl p-8 hover:border-cyan-500 transition-colors">
+            <motion.div
+              className="border-2 border-slate-200 rounded-2xl p-8 hover:border-cyan-500 transition-colors"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            >
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-heading font-bold text-slate-900 mb-2">Private Office</h3>
                 <div className="flex flex-col items-center mb-4">
@@ -215,7 +228,7 @@ function App() {
               >
                 Get Started
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
