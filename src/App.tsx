@@ -62,7 +62,7 @@ function App() {
       <header
         className="relative text-white bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(to bottom right, rgba(15, 23, 42, 0.65), rgba(51, 65, 85, 0.60)), url('/office copy copy.jpg')`
+          backgroundImage: `linear-gradient(to bottom right, rgba(15, 23, 42, 0.65), rgba(51, 65, 85, 0.60)), url('/office1.jpg')`
         }}
       >
         <nav className="container mx-auto px-6 py-4 relative z-10">
