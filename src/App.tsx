@@ -234,7 +234,7 @@ function App() {
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get in Touch</h3>
                 <div className="space-y-5">
@@ -280,6 +280,22 @@ function App() {
                       <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
                     </div>
                   </a>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
+                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Send Us a Message</h3>
+                <div className="h-[500px] overflow-hidden">
+                  <iframe
+                    src="https://tally.so/embed/VLG0M6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="Contact Form"
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
               </div>
             </div>
