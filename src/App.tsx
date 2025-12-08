@@ -315,20 +315,15 @@ function App() {
                       </a>
                     </div>
                   </div>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=3189+Kirby+Whitten+Rd+Bartlett+Tennessee+38134"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 group cursor-pointer"
-                  >
+                  <div className="flex items-start gap-4 group">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Location</p>
-                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
+                      <p className="text-slate-600 font-medium">3189 Kirby Whitten Rd Bartlett, Tennessee 38134</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
 
