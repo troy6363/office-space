@@ -241,7 +241,7 @@ function PrivateOfficeThankYou() {
               controls
               preload="metadata"
             >
-              <source src="/virtual_office_space_ai.mp4" type="video/mp4" />
+              <source src="/office_space_ai.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
