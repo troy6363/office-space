@@ -293,34 +293,28 @@ function App() {
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get in Touch</h3>
                 <div className="space-y-5">
-                  <a
-                    href="tel:+19012960393"
-                    className="flex items-start gap-4 group cursor-pointer"
-                  >
+                  <div className="flex items-start gap-4 group">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Phone</p>
-                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">
+                      <a href="tel:+19015551234" className="text-slate-600 hover:text-cyan-600 transition-colors font-medium">
                         (901) 296-0393
-                      </p>
+                      </a>
                     </div>
-                  </a>
-                  <a
-                    href="mailto:info@meadowlandllc.com"
-                    className="flex items-start gap-4 group cursor-pointer"
-                  >
+                  </div>
+                  <div className="flex items-start gap-4 group">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold mb-1 text-slate-900">Email</p>
-                      <p className="text-slate-600 hover:text-cyan-600 transition-colors font-medium break-all">
+                      <a href="mailto:info@meadowlandllc.com" className="text-slate-600 hover:text-cyan-600 transition-colors font-medium break-all">
                         info@meadowlandllc.com
-                      </p>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=3189+Kirby+Whitten+Rd+Bartlett+Tennessee+38134"
                     target="_blank"
