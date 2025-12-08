@@ -35,7 +35,7 @@ function VirtualOfficeThankYou() {
               What Happens Next?
             </h2>
             <p className="text-xl text-slate-600 font-light">
-              We'll review your inquiry and reach out to you within 24 hours to discuss your needs.
+              We'll review your inquiry and reach out to you shortly to discuss your needs.
             </p>
           </div>
 
