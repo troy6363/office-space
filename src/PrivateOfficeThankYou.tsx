@@ -237,7 +237,7 @@ function PrivateOfficeThankYou() {
 
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12 max-w-2xl mx-auto">
             <video
-              className="w-full aspect-[9/16]"
+              className="w-full h-auto"
               controls
               preload="metadata"
             >
