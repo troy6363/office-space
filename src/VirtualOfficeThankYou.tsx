@@ -11,7 +11,12 @@ function VirtualOfficeThankYou() {
         </div>
       </nav>
 
-      <div className="bg-gradient-to-br from-cyan-500 via-blue-500 to-blue-600 text-white py-16 relative overflow-hidden">
+      <div
+        className="text-white py-16 relative overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, rgba(6, 182, 212, 0.75), rgba(37, 99, 235, 0.70)), url('/office1.jpg')`
+        }}
+      >
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGgxMlYxNEgzNnYxMjB6bS00OCAwaDEyVjE0SDEydjEyMHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="flex justify-center mb-6">
