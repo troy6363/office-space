@@ -239,7 +239,7 @@ function App() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
-                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Request More Information</h3>
+                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get in Touch</h3>
                 <div className="space-y-5">
                   <a
                     href="tel:+19012960393"
