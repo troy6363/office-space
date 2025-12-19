@@ -1,4 +1,4 @@
-import { Building2, MapPin, DollarSign, Wifi, Coffee, Users, Phone, Mail } from 'lucide-react';
+import { Building2, MapPin, DollarSign, Wifi, Coffee, Phone, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function App() {
@@ -97,16 +97,6 @@ function App() {
               <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors duration-300">Prime Location</h3>
               <p className="text-slate-600 transition-colors duration-300">
                 Located in Bartlett, TN - the safest area in the midsouth with easy access to major highways.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 group cursor-pointer">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300">
-                <Users className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-heading font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Meeting Rooms</h3>
-              <p className="text-slate-600 transition-colors duration-300">
-                Professional conference rooms available for client presentations and team meetings.
               </p>
             </div>
 
