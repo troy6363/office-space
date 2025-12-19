@@ -287,7 +287,7 @@ function App() {
               </div>
 
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
-                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Get More Information</h3>
+                <h3 className="text-2xl font-heading font-bold mb-6 text-slate-900">Request More Information</h3>
                 <div className="h-[500px] overflow-hidden">
                   <iframe
                     src="https://tally.so/embed/VLG0M6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
